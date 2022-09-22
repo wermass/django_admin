@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список Семинаров</title>
+</head>
+<body>
+    {%  for item in seminar  %}
+       <br> номер семинара = {{item.id_seminar}}<br>
+        цена = {{item.money}}<br>
+        цена со скидкой = {{item.money_sale}}<br>
+        краткое описание = {{item.descroption}}<br>
+        полное описание = {{item.descroption_small}}<br>
+        Дата начала семинара = {{  item.date   }}<br>
+
+    ______________________________
+
+    {% endfor %}
+   <br> писька
+
+    {%  for items in promo  %}
+       <br> номер промокода = {{ items.id_promo}}<br>
+        сам промокод = {{  items.promo_name }} <br>
+        Дата, на сколько увеличит = {{  items.date   }}<br>
+
+    ______________________________
+
+    {% endfor %}
+<br> писька1
+<br>
+</body>
+</html>
