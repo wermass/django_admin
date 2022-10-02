@@ -26,20 +26,15 @@
   </div>
 </nav>
 <div class="container mt-3">
-  <h1><center> Список семинаров </center></h1>
+  <h1><center> Список промокодов </center></h1>
   <div class="row">
-        {%  for item in seminar  %}
+        {%  for item in promos  %}
               <div class="card mb-3">
                 <div class="card-header {% cycle 'text-danger' 'text-success' %}">
-                  Номер семинара: {{item.id_seminar}}
+                  Номер семинара: {{item.id_promo}}
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">краткое описание: {{item.description_small}}</h5>
-                  <p class="card-text">полное описание: {{item.description | truncatewords:50}}</p>
-                  <a href="#" class="btn btn-primary">Подробнее</a>
-                </div>
-                <div class="card-footer text-muted">
-                  {{  item.date   }}
+                  <h5 class="card-title">промокод: {{item.promo_name}}</h5>
                 </div>
               </div>
         {% endfor %}

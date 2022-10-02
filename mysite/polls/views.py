@@ -18,24 +18,22 @@ class MainView(ListView):
 
     def get(self, request):
         seminar = Seminar.objects.all()
-
-        context = {
-            'seminar': seminar,
-
-        }
-        return render(request, 'index.html', context)
-
-class PromoView(ListView):
-    ''' Класс отображения промокода '''
-    model = Promo
-    template_name = 'index.html'
-    context_object_name = 'promo'
-
-    def get(self, request):
         promo = Promo.objects.all()
 
         context = {
+            'seminar': seminar,
             'promo': promo,
+            'title': 'Титульник',
 
         }
         return render(request, 'index.html', context)
+
+def get_promo(request):
+
+    promos = Promo.objects.all()
+
+    context = {
+
+        'promos': promos,
+            }
+    return render(request, 'promo.html', context)

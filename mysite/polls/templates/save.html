@@ -1,0 +1,20 @@
+    {%  for item in seminar  %}
+       <br> номер семинара = {{item.id_seminar}}<br>
+        цена = {{item.money}}<br>
+        цена со скидкой = {{item.money_sale}}<br>
+        краткое описание = {{item.description_small}}<br>
+        полное описание = {{item.description}}<br>
+        Дата начала семинара = {{  item.date   }}<br>
+    {% endfor %}
+
+
+    {%  for items in promo  %}
+       <br> номер промокода = {{ items.id_promo}}<br>
+        сам промокод = {{  items.promo_name }} <br>
+        Время, на сколько увеличит = {{  items.date   }}<br>
+
+    ______________________________
+
+    {% endfor %}
+
+<br>
